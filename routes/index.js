@@ -7,7 +7,7 @@ mongoos.connect('mongodb+srv://crudapi:waseem123@atlascluster.dl2kzoz.mongodb.ne
 .catch(err=>console.log('could not connect to mongodb',err))
 
 
-/*
+
 router.post('/',async(req,res)=>{
     try{
           const product=await Product.create(req.body);
@@ -16,8 +16,8 @@ router.post('/',async(req,res)=>{
             res.status(err).json({message:err.message});
         }
     });
-    */
-   router.use(express.json());//to parse the json data
+    
+  /* router.use(express.json());//to parse the json data
    
    router.post('/',async(req,res)=>{
     router.post('/post', async(req, res) => {
@@ -33,7 +33,9 @@ router.post('/',async(req,res)=>{
             res.status(err).json({message:err.message});
         }
     })
+    
 });//to create a new product
+*/
 router.get('/',async(res,req)=>{
   try{
       const product=await Product.find({});
